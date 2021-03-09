@@ -58,11 +58,10 @@ function App() {
 
     
     return (
-    <div className="App">
+    <div className="app">
     <Player
       song={songs[currentSongIndex]}
       nextSong={songs[nextSongIndex]} 
-    
     />
     </div>
   );

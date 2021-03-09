@@ -4,5 +4,12 @@ body {
 margin : 1em auto;
 padding: 0;
 box-sizing: border-box;
-font-family: sans-serif;
+font-family: 'Courier New', Courier, monospace;
+background-color: #F9EEF1;
+}
+
+.app {
+  display : flex;
+  align-items: center;
+  justify-content: center;
 }

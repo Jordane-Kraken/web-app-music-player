@@ -5,16 +5,15 @@ import { faPlay, faPause, faForward, faBackward } from '@fortawesome/free-solid-
 function PlayerControls(props) {
   return (
     <div className="player__controls">
-    <button className="skip-btn">
-      <FontAwesomeIcon icon={faBackward} />
-    </button>
-    <button className="play-btn">
-      <FontAwesomeIcon icon={faPlay} />
-    </button>
-    <button className="skip-btn">
-      <FontAwesomeIcon icon={faForward} />
-    </button>
-
+      <button className="skipBtn">
+        <FontAwesomeIcon icon={faBackward} />
+      </button>
+      <button className="playBtn">
+        <FontAwesomeIcon icon={faPlay} />
+      </button>
+      <button className="skipBtn">
+        <FontAwesomeIcon icon={faForward} />
+      </button>
     </div>
   )
 }

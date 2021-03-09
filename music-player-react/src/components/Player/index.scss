@@ -1,3 +1,32 @@
 .player {
   text-align: center;
+
+  &__title {
+    text-transform: uppercase;
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+  }
+  .playBtn {
+    margin: 0 30px;
+    padding: 20px;
+    border-radius: 50%;
+    background-color: #f5c0c0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    
+  }
+  .skipBtn {
+    background: none;
+    margin: 0 30px;
+    padding: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #888;
+  }
 }

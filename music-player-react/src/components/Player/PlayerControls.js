@@ -1,13 +1,19 @@
 import { React } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlay, faPause, faForward, faBackward } from '@fortawesome/free-solid-svg-icons';
 
 function PlayerControls(props) {
   return (
-    <div className="player__details">
-    <div className="details__img">
-      <img src={props.song.img_src} alt=""/>
-    </div>
-    <h3 className="details__title">{props.song.title}</h3>
-    <h4 className="details__artist">{props.song.artist}</h4>
+    <div className="player__controls">
+    <button className="skip-btn">
+      <FontAwesomeIcon icon={faBackward} />
+    </button>
+    <button className="play-btn">
+      <FontAwesomeIcon icon={faPlay} />
+    </button>
+    <button className="skip-btn">
+      <FontAwesomeIcon icon={faForward} />
+    </button>
 
     </div>
   )

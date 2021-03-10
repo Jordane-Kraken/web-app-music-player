@@ -14,13 +14,13 @@ function Header() {
       wrapper='b'
       steps={[
         'working',
-        1000,
+        2000,
         'chilling',
-        1000,
+        2000,
         'dreaming',
-        1000,
+        2000,
         'coding',
-        1000
+        2000
       ]}
       />
       </p>

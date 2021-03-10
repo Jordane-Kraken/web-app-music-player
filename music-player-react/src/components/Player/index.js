@@ -12,10 +12,15 @@ function Player(props) {
   useEffect(() => {
     if (isPlaying) {
       audioElement.current.play();
+        audioElement.current.addEventListener('ended', () => {
+          skipSong();
+        });
     } else {
       audioElement.current.pause();
     }
   });
+
+
 
   const skipSong = (forwards = true) => {
     if (forwards) {
@@ -45,7 +50,7 @@ function Player(props) {
 
   return (
     <div className="player">
-    <Header />
+      <Header />
       <audio src={props.songs[props.currentSongIndex].src} ref={audioElement}></audio>
       <h2 className="player__title">Playing Now</h2>
       <PlayerDetails

@@ -9,9 +9,10 @@
     display: flex;
     align-items: center;
     justify-content: center; 
+    flex-wrap: wrap;
   }
   .playBtn {
-    margin: 0 30px;
+    margin: 0;
     padding: 20px;
     border-radius: 50%;
     background-color: #f5c0c0;
@@ -22,7 +23,7 @@
   }
   .skipBtn {
     background: none;
-    margin: 0 30px;
+    margin: 0;
     padding: 20px;
     border: none;
     outline: none;

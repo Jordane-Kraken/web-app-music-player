@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Header from '../Header';
 import Player from '../Player';
 
 function App() {
@@ -59,6 +60,7 @@ function App() {
     
     return (
     <div className="app">
+    <Header />
     <Player
       song={songs[currentSongIndex]}
       nextSong={songs[nextSongIndex]} 

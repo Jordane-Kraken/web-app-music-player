@@ -10,7 +10,7 @@ function App() {
         src: "./music/zmeyev-every-night.mp3"
       },
       {
-        title : "Chamomille",
+        title : "Chamomile",
         artist: "Austin Marc",
         img_src: "./images/song-2.jpg",
         src: "./music/chamomile.mp3"

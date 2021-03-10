@@ -10,17 +10,16 @@ function Player(props) {
   const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
+    audioElement.current.addEventListener('ended', () => {
+    skipSong();
+    });
     if (isPlaying) {
       audioElement.current.play();
-        audioElement.current.addEventListener('ended', () => {
-          skipSong();
-        });
+      
     } else {
       audioElement.current.pause();
     }
   });
-
-
 
   const skipSong = (forwards = true) => {
     if (forwards) {

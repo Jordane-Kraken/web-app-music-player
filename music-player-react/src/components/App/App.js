@@ -1,9 +1,8 @@
-import { useState } from 'react';
-import Header from '../Header';
+import { useState, useEffect } from 'react';
 import Player from '../Player';
 
 function App() {
-    const [songs, setSongs] = useState([
+    const [songs] = useState([
       {
         title : "Every night",
         artist: "Zmeyev",
@@ -14,7 +13,7 @@ function App() {
         title : "Chamomille",
         artist: "Austin Marc",
         img_src: "./images/song-2.jpg",
-        src: "./music/chamomille.mp3"
+        src: "./music/chamomile.mp3"
       },
       {
         title : "Pink sky",
@@ -35,10 +34,10 @@ function App() {
         src: "./music/when-theres-nothing-else.mp3"
         },
         {
-        title : "Sunset",
-        artist: "Odyssee, Gatz2Gatz",
-        img_src: "./assets/images/song-6.jpg",
-        src: "./assets/music/odyssee-gatz2gatz-sunset.mp3"
+          title : "Calm",
+          artist: "Odyssee, Florent Garcia",
+          img_src: "./images/song-6.jpg",
+          src: "./music/odyssee-florent-garcia-calm.mp3"
         },
         {
         title : "Ylang Ylang",
@@ -52,18 +51,35 @@ function App() {
         img_src: "./images/song-8.jpg",
         src: "./music/lindecis-soulful.mp3"
         },
+        {
+          title : "Sunset",
+          artist: "Odyssee, Gatz2Gatz",
+          img_src: "./images/song-9.jpg",
+          src: "./music/sunset.mp3"
+        },
     ]);
 
     const [currentSongIndex, setCurrentSongIndex] = useState(0);
     const [nextSongIndex, setNextSongIndex] = useState(currentSongIndex + 1);
 
+    useEffect(() => {
+      setNextSongIndex(() => {
+        if (currentSongIndex +1 > songs.length - 1) {
+          return 0;
+        } else {
+          return currentSongIndex +1;
+        }
+      });
+    }, [currentSongIndex, songs.length]);
+
     
     return (
     <div className="app">
-    <Header />
     <Player
-      song={songs[currentSongIndex]}
-      nextSong={songs[nextSongIndex]} 
+      currentSongIndex={currentSongIndex}
+      setCurrentSongIndex={setCurrentSongIndex} 
+      nextSongIndex={nextSongIndex}
+      songs={songs}
     />
     </div>
   );

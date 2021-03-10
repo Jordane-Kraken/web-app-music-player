@@ -14,4 +14,5 @@ background-color: #F9EEF1;
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: column;
+  margin: auto;
 }

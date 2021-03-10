@@ -10,8 +10,8 @@ function Header() {
       <h1>React Music Player</h1>
       <p>Special music for{' '}
       <Typical
-      loop={3}
-      wrapper='p'
+      loop={1}
+      wrapper='b'
       steps={[
         'working',
         1000,
